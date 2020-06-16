@@ -1,0 +1,356 @@
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Navigation */
+
+.navigation .nav-container{
+    display: grid;
+    width: 100%;
+    margin: auto;
+    border: 1px solid black;
+    max-height: 5rem;
+    min-height: 4.5rem;
+    grid-template-columns: 1fr 2fr 1fr;
+    background-color: black;
+    align-items: center;
+    max-height: 100px;
+
+}
+
+.nav-container a{
+    text-decoration: none;
+    margin: 1.2rem;
+    color: white;
+    text-transform: uppercase;
+    font-size: 12px;
+    
+}
+
+.nav-container a:hover{
+    color:slategray;
+}
+
+
+.nav-container ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    justify-self: left;
+}
+
+
+.nav-container img{
+    height: 100%;
+    width: auto;
+}
+
+.nav-container .search-box{
+    justify-self: right;
+    margin-right: 1rem;
+}
+
+.search-box input{
+    height: 1.5rem;
+    width: 10rem;
+    position: relative;
+    outline: none;
+   
+}
+
+.search-box .submit{
+    height: 1.5rem;
+    width: 1.4rem;
+    position: absolute;
+    right: 15px;
+    background-color: white;
+}
+
+/* Main Template */
+
+.main .main-container{
+    min-width: 98%;
+    min-height: 180vh;
+    max-height: 180vh;
+    display: grid;
+    margin: 5px;
+    grid-gap: 0.4rem;
+    grid-template-areas: 
+    'first first first first'
+    'second second third fourth'
+    'fifth sixth sixth fourth'
+    "seven eight nine nine";
+}
+
+
+
+/* Main Sections */
+
+.main-container .first{
+    grid-area: first;
+    background: url('photos/first.jpg') no-repeat center center/cover;
+    filter: grayscale(100%);
+}
+
+.main-container .first:hover{
+    filter: grayscale(0%);
+}
+
+.main-container .second{
+    grid-area: second;
+    background: url('photos/second.jpg') no-repeat center center/cover;
+    filter: grayscale(100%);
+}
+
+.main-container .second:hover{
+    filter: grayscale(0%);
+}
+
+.main-container .third{
+    grid-area: third;
+    background: url('photos/third.jpg') no-repeat center center/cover;
+    filter: grayscale(100%);
+}
+
+.main-container .third:hover{
+    filter: grayscale(0%);
+}
+
+.main-container .fourth{
+    grid-area: fourth;
+    background: url('photos/fourth.jpg') no-repeat center center/cover;
+    filter: grayscale(100%);
+}
+
+.main-container .fourth:hover{
+    filter: grayscale(0%);
+}
+
+.main-container .fifth{
+    grid-area: fifth;
+    background: url('photos/fifth.jpg') no-repeat center center/cover;
+    filter: grayscale(100%);
+}
+
+.main-container .fifth:hover{
+    filter: grayscale(0%);
+}
+
+.main-container .sixth{
+    grid-area: sixth;
+    background: url('photos/sixth.jpg') no-repeat center center/cover;
+    filter: grayscale(100%);
+}
+
+.main-container .sixth:hover{
+    filter: grayscale(0%);
+}
+
+.main-container .seven{
+    grid-area: seven;
+    background: url('photos/eight.jpg') no-repeat center center/cover;
+    filter: grayscale(100%);
+}
+
+.main-container .seven:hover{
+    filter: grayscale(0%);
+}
+
+.main-container .eigth{
+    grid-area: eight;
+    background: url('photos/last.jpg') no-repeat center center/cover;
+    filter: grayscale(100%);
+}
+
+.main-container .eigth:hover{
+    filter: grayscale(0%);
+}
+
+.main-container .nine{
+    grid-area: nine;
+    background: url('photos/nine.jpg') no-repeat center center/cover;
+    filter: grayscale(100%);
+}
+
+.main-container .nine:hover{
+    filter: grayscale(0%);
+}
+
+
+/* Overlay */
+
+
+.main-container h2{
+    font-size: 2.2rem;
+    color: white;
+    text-shadow: 1px 1px black;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.main-container .btnMain{
+    background-color: white;
+    height: 2.5rem;
+    width: 12rem;
+    font-size: 1rem;
+    box-shadow: 1px 1px black;
+}
+
+
+
+.main-container .overlay{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+
+.main-container .overlay:hover{
+    opacity: 100;
+}
+
+/* Footer */
+
+.footer-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+
+.footer-container p{
+    font-size: 12px;
+    color: 	#383838;
+    font-weight: 100;
+}
+
+.bottom-links{
+    margin-right: 3rem;
+    margin-top: 1.5rem;
+    margin-bottom: 9rem;
+}
+
+.bottom-links a{
+    text-decoration: none;
+    color: black;
+    margin: 1.4rem;
+    
+}
+
+.item-links a{
+    color: black;
+    text-decoration: none;
+}
+
+.copy-tag{
+   margin-top: 1.5rem;
+   margin-bottom: 1.5rem; 
+}
+
+/* Address */
+
+.floating-address{
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    height: 3rem;
+    padding: auto;
+    position: fixed;
+    bottom: 0;
+    background-color: white;
+    
+}
+
+.floating-address p{
+    font-size: 12px;
+    color: #d4d4d4;
+    font-weight: 200;
+    vertical-align: middle;
+    line-height: 3rem;
+
+}
+
+.floating-address a{
+    text-decoration: none;
+}
+
+.floating-address p:hover{
+    color: slategray;
+}
+
+
+.dropdown-content{
+   background-color:white;
+   min-height: 20rem;
+   width: 100%;
+   position: absolute;
+   display: flex;
+   flex-direction: row;
+   max-height: 20rem; 
+   z-index: -1;
+   overflow: hidden;
+   justify-content: space-evenly;
+   align-items: center;
+   
+}
+
+.dropdown-content a{
+    outline: none;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 400;
+    text-align: center;
+    margin: 3px;
+    color:white;
+    margin-top: 10px;
+    text-transform: uppercase;
+
+}
+
+.dropdown-content img{
+    margin: 10px 10px;
+    max-width: 250px;
+    height: 200px;
+    padding: 6px;
+    border: 1px solid white;
+}
+
+.dropdown-content h5{
+    color: white;
+    margin-left: 10px;
+}
+
+.dropdown-content a:hover{
+    color: slategray;
+}
+
+.dropdown-content .dropdown-links{
+    display: flex;
+    flex-direction: column;
+    margin-left: 8rem;
+
+}
+
+
+
+.dropdown-content h5:hover{
+    color: slategray;
+}
+
+
+
+/* For Hover  background-color: rgba(8,8,8,.6);  */
+
+
