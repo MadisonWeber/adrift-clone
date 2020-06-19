@@ -6,6 +6,7 @@
     padding: 0;
     line-height: 1.2;
     font-family: 'Roboto', sans-serif;
+
 }
 
 /* Navigation */
@@ -33,6 +34,39 @@
     
 }
 
+
+
+/*
+
+.nav-container .skate-container {
+    width: 300px;
+
+    position: relative;
+}
+
+@keyframes skate {
+    0% {left: 0px;}
+    25% {left: 105px;}
+    50% {left: 210px;}
+    75% {left: 105px;}
+    100% {left: 0px;}
+}
+
+.nav-container .skate-container img{
+    max-height: 2rem;
+    max-width: auto;
+    position: relative;
+    animation-name: skate;
+    animation-duration: 10s;
+    animation-delay: 5s;
+    animation-timing-function: linear;
+
+}
+
+*/
+
+
+
 .nav-container a:hover{
     color:slategray;
 }
@@ -43,6 +77,8 @@
     align-items: center;
     list-style: none;
     justify-self: left;
+    white-space: nowrap;
+    
 }
 
 
@@ -219,6 +255,8 @@
     opacity: 100;
 }
 
+
+
 /* Footer */
 
 .footer-container{
@@ -290,6 +328,8 @@
     color: slategray;
 }
 
+/* DropDown 1 */
+
 
 .dropdown-content{
    background-color:white;
@@ -350,7 +390,63 @@
 }
 
 
+/* DropDown 2 */
 
-/* For Hover  background-color: rgba(8,8,8,.6);  */
+.dropdown-brands{
+    background-color:white;
+    min-height: 20rem;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    max-height: 20rem; 
+    z-index: -2;
+    overflow: hidden;
+    justify-content: space-evenly;
+    position: absolute;
+    
+ }
+
+.dropdown-brands .brand-links{
+    width: 30%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    position: relative;
+    left: -100px;
+    margin: 10px;
+}
+
+ .dropdown-brands a{
+    outline: none;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 400;
+    text-align: center;
+    margin: 3px;
+    color:black;
+    margin-top: 10px;
+    text-transform: uppercase;
+    color: white;
+}
+
+.dropdown-brands a:hover{
+    color: slategray;
+}
 
 
+@media(max-width:900px){
+    .nav-container img{
+      display: none;
+    }
+
+    .nav-container .search-box{
+        display: none;
+    }
+
+    .nav-container{
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+    }
+    
+
+}
