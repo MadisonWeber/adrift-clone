@@ -6,6 +6,7 @@
     padding: 0;
     line-height: 1.2;
     font-family: 'Roboto', sans-serif;
+
 }
 
 /* Navigation */
@@ -33,6 +34,39 @@
     
 }
 
+
+
+/*
+
+.nav-container .skate-container {
+    width: 300px;
+
+    position: relative;
+}
+
+@keyframes skate {
+    0% {left: 0px;}
+    25% {left: 105px;}
+    50% {left: 210px;}
+    75% {left: 105px;}
+    100% {left: 0px;}
+}
+
+.nav-container .skate-container img{
+    max-height: 2rem;
+    max-width: auto;
+    position: relative;
+    animation-name: skate;
+    animation-duration: 10s;
+    animation-delay: 5s;
+    animation-timing-function: linear;
+
+}
+
+*/
+
+
+
 .nav-container a:hover{
     color:slategray;
 }
@@ -43,6 +77,8 @@
     align-items: center;
     list-style: none;
     justify-self: left;
+    white-space: nowrap;
+    
 }
 
 
@@ -63,13 +99,24 @@
     outline: none;
    
 }
+.search-box{
+    
+    display: inline-flex;
+    position: relative;
 
-.search-box .submit{
-    height: 1.5rem;
-    width: 1.4rem;
+}
+
+
+.search-box .form-submit{
+
+    outline: none;
+    border: none;
+    right: .1rem;
+    height: 1.3rem;
+    width: 1.3rem;
     position: absolute;
-    right: 15px;
-    background-color: white;
+    top:10%;
+
 }
 
 /* Main Template */
@@ -200,6 +247,7 @@
     width: 12rem;
     font-size: 1rem;
     box-shadow: 1px 1px black;
+    outline: none;
 }
 
 
@@ -218,6 +266,8 @@
 .main-container .overlay:hover{
     opacity: 100;
 }
+
+
 
 /* Footer */
 
@@ -247,6 +297,11 @@
     margin: 1.4rem;
     
 }
+
+.bottom-links a:hover{
+    color:coral;
+}
+
 
 .item-links a{
     color: black;
@@ -290,15 +345,17 @@
     color: slategray;
 }
 
+/* DropDown 1 */
+
 
 .dropdown-content{
    background-color:white;
-   min-height: 20rem;
+   min-height: 38vh;
+   max-height: 38vh;
    width: 100%;
    position: absolute;
    display: flex;
    flex-direction: row;
-   max-height: 20rem; 
    z-index: -1;
    overflow: hidden;
    justify-content: space-evenly;
@@ -312,7 +369,7 @@
     font-size: 12px;
     font-weight: 400;
     text-align: center;
-    margin: 3px;
+    margin: 2px;
     color:white;
     margin-top: 10px;
     text-transform: uppercase;
@@ -321,10 +378,15 @@
 
 .dropdown-content img{
     margin: 10px 10px;
-    max-width: 250px;
-    height: 200px;
+    max-width: 16rem;
+    max-height: 12rem;
     padding: 6px;
     border: 1px solid white;
+}
+
+.dropdown-content img:hover{
+    border:1.5px solid ghostwhite;
+    opacity: 90%;
 }
 
 .dropdown-content h5{
@@ -340,6 +402,8 @@
     display: flex;
     flex-direction: column;
     margin-left: 8rem;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
 
 }
 
@@ -350,7 +414,167 @@
 }
 
 
+/* DropDown 2 */
 
-/* For Hover  background-color: rgba(8,8,8,.6);  */
+.dropdown-brands{
+    background-color:white;
+    min-height: 38vh;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    max-height: 38vh; 
+    z-index: -2;
+    overflow: hidden;
+    justify-content: space-evenly;
+    position: absolute;
+    
+ }
+
+.dropdown-brands .brand-links{
+    width: 30%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    position: relative;
+    left: -100px;
+    margin: 10px;
+}
+
+ .dropdown-brands a{
+    outline: none;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 400;
+    text-align: center;
+    margin: 3px;
+    color:black;
+    margin-top: 10px;
+    text-transform: uppercase;
+    color: white;
+}
+
+.dropdown-brands a:hover{
+    color: slategray;
+}
 
 
+@media(max-width:900px){
+
+
+    .nav-container .search-box{
+        display: none;
+    }
+    
+    .main .main-container{
+        grid-template-areas: 
+        'first first first first'
+        'second second third third'
+        'fourth fourth  fifth fifth'
+        'sixth sixth seven seven'
+        'eight eight nine nine';
+    }
+
+    .dropdown-brands a{
+        font-size: 10px;
+        font-weight: 300;
+        margin: .3rem;
+        
+    }
+
+    .dropdown-content a{
+        font-size: 10px;
+        font-weight: 300;
+        text-align: left;
+        }
+    
+    .dropdown-content{
+            justify-content: left;
+            min-height: 28vh;
+            max-height: 28vh;
+     
+    }
+
+    .dropdown-brands{
+        min-height: 28vh;
+        max-height: 28vh;
+    }
+
+    .nav-container a{
+        font-size: 10px;
+        margin: .5rem;
+    }
+
+    .bottom-links{
+        display: flex;
+        flex-direction: column;
+        margin-top: .5rem;
+    }
+    
+    .bottom-links a{
+        text-decoration: none;
+        color: black;
+        margin: 6px;
+        font-size: 13px;
+        font-weight: 400;
+        
+    }
+
+
+}
+
+@media(max-width:600px){
+    .main .main-container{
+        grid-template-areas:
+        'first first'
+        'second third'
+        'fourth fifth'
+        'sixth seven'
+        'eight eight'
+        'nine nine'
+    }
+
+  
+
+    .dropdown-shirts{
+        display: none;
+    }
+
+    .dropdown-shoes{
+        display: none;
+    }
+
+    .dropdown-content{
+        justify-content: left;
+        min-height: 28vh;
+        max-height: 28vh;
+ 
+    }
+
+    .dropdown-content .dropdown-links{
+        margin-top: 1.5rem;
+    }
+
+    .dropdown-brands{
+        min-height: 28vh;
+        max-height: 28vh;
+    }
+
+    .dropdown-content a{
+    font-size: 10px;
+    font-weight: 300;
+    text-align: left;
+
+    }
+
+    .dropdown-brands a{
+        font-size: 10px;
+        font-weight: 300;
+        margin: .3rem;
+        text-overflow: ellipsis;
+        
+
+    }
+
+
+
+}
