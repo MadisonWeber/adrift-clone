@@ -418,12 +418,20 @@
 
 .dropdown-brands{
     background-color:white;
+<<<<<<< HEAD
     min-height: 38vh;
+=======
+    min-height: 20rem;
+>>>>>>> ab754c1d59e25bb9ad06370c29edd1b0f444be80
     width: 100%;
     position: absolute;
     display: flex;
     flex-direction: row;
+<<<<<<< HEAD
     max-height: 38vh; 
+=======
+    max-height: 20rem; 
+>>>>>>> ab754c1d59e25bb9ad06370c29edd1b0f444be80
     z-index: -2;
     overflow: hidden;
     justify-content: space-evenly;
@@ -456,6 +464,7 @@
 .dropdown-brands a:hover{
     color: slategray;
 }
+<<<<<<< HEAD
 
 
 @media(max-width:900px){
@@ -574,7 +583,23 @@
         
 
     }
+=======
+>>>>>>> ab754c1d59e25bb9ad06370c29edd1b0f444be80
 
 
+@media(max-width:900px){
+    .nav-container img{
+      display: none;
+    }
+
+    .nav-container .search-box{
+        display: none;
+    }
+
+    .nav-container{
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+    }
+    
 
 }
