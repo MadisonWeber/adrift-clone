@@ -31,12 +31,13 @@
     color: white;
     text-transform: uppercase;
     font-size: 12px;
+    overflow: hidden;
     
 }
 
 
 
-/*
+/* Makes a Skateboard 
 
 .nav-container .skate-container {
     width: 300px;
